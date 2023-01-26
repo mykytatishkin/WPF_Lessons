@@ -1,0 +1,31 @@
+﻿<Window x:Class="WpfStyles_P05.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfStyles_P05"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="0.2*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="btnOne" Style="{StaticResource ResourceKey=btnStyle}" Grid.Column="0">One</Button>
+        <Button Grid.Column="1" Style="{StaticResource btnStyle}">Two</Button>
+        <Button Grid.Column="2" Style="{StaticResource btnStyle}">Three</Button>
+        <Button Grid.Column="3" Style="{StaticResource btnStyle}">Four</Button>
+        <Button Grid.Column="4" Style="{StaticResource btnStyle}">Five</Button>
+        <Button Grid.Column="5" Style="{StaticResource btnStyle}">Six</Button>
+        <Button Grid.Column="2" Style="{x:Null}" Grid.Row="2" Grid.ColumnSpan="2" Click="Button_Click">Push</Button>
+    </Grid>
+</Window>
